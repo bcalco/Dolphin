@@ -636,13 +636,6 @@ errorLastObject: target
 
 	^self error: ('<1p> is my last object' expandMacrosWith: target)!
 
-errorValueNotFound: aValue
-	"Private - Report that an attempt was made to look up the key for a value which was not
-	in receiver"
-
-	^self error: ('value not found: <1p>' expandMacrosWith: aValue)
-!
-
 fifth
 	"Answer an <Object> which is the fifth element of the receiver. 
 	Raise an exception if the element does not exist."
@@ -1336,7 +1329,6 @@ writeStream
 !SequenceableCollection categoriesFor: #errorCollectionsOfDifferentSizes!enumerating!public! !
 !SequenceableCollection categoriesFor: #errorFirstObject:!exceptions!private! !
 !SequenceableCollection categoriesFor: #errorLastObject:!exceptions!private! !
-!SequenceableCollection categoriesFor: #errorValueNotFound:!exceptions!private! !
 !SequenceableCollection categoriesFor: #fifth!accessing!public! !
 !SequenceableCollection categoriesFor: #findFirst:!public!searching! !
 !SequenceableCollection categoriesFor: #findLast:!public!searching! !
