@@ -123,6 +123,7 @@ package setClassNames: #(
 	#{StructureArrayTest}
 	#{SWORDArrayTest}
 	#{SymbolTest}
+	#{SystemDictionaryTest}
 	#{TestRunConsoleLogger}
 	#{TestRunLogger}
 	#{TimeStampTest}
@@ -494,6 +495,12 @@ DolphinTest subclass: #STBTest
 	classInstanceVariableNames: ''
 	classConstants: {}!
 DolphinTest subclass: #StreamTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''
+	classConstants: {}!
+DolphinTest subclass: #SystemDictionaryTest
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
