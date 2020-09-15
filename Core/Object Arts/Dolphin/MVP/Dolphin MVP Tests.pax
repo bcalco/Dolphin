@@ -43,7 +43,6 @@ package setClassNames: #(
 	#{UI.Tests.ListControlTest}
 	#{UI.Tests.ListPresenterTest}
 	#{UI.Tests.ListViewTest}
-	#{UI.Tests.MockScintillaView}
 	#{UI.Tests.MoenTreeViewTest}
 	#{UI.Tests.MoenTreeViewTest2}
 	#{UI.Tests.MultilineTextEditTest}
@@ -58,7 +57,6 @@ package setClassNames: #(
 	#{UI.Tests.ReferenceViewTest}
 	#{UI.Tests.ResourceIdentifierTest}
 	#{UI.Tests.RichTextEditTest}
-	#{UI.Tests.ScintillaViewTest}
 	#{UI.Tests.ScrollingDecoratorTest}
 	#{UI.Tests.SelectableItemsTest}
 	#{UI.Tests.SelectableListItemsTest}
@@ -68,7 +66,6 @@ package setClassNames: #(
 	#{UI.Tests.SliderTest}
 	#{UI.Tests.StaticPathTest}
 	#{UI.Tests.StaticTextTest}
-	#{UI.Tests.StStyler}
 	#{UI.Tests.StyledContainerTest}
 	#{UI.Tests.TabViewTest}
 	#{UI.Tests.TabViewXPTest}
@@ -112,7 +109,6 @@ package setPrerequisites: #(
 	'Presenters\Number\Dolphin Number Presenter'
 	'Presenters\Radio\Dolphin Radio Buttons'
 	'Presenters\Text\Dolphin Rich Text Presenter'
-	'Views\Scintilla\Dolphin Scintilla View'
 	'Views\Scrollbars\Dolphin Scrollbars'
 	'Views\Slider\Dolphin Slider Control'
 	'Views\Styled Views\Dolphin Styled Views'
@@ -122,7 +118,6 @@ package setPrerequisites: #(
 	'Presenters\Tree\Dolphin Tree Presenter'
 	'Type Converters\Dolphin Type Converters'
 	'Models\Value\Dolphin Value Models'
-	'..\System\Compiler\Smalltalk Parser'
 	'..\..\..\Contributions\Camp Smalltalk\SUnit\SUnit'
 	'..\..\..\Contributions\Camp Smalltalk\SUnit\SUnitPreload'
 ).
@@ -139,18 +134,6 @@ UI subclass: #'UI.Tests'
 	instanceVariableNames: ''
 	classVariableNames: ''
 	imports: #(#{XProgramming.SUnit})
-	classInstanceVariableNames: ''
-	classConstants: {}!
-Core.Object subclass: #'UI.Tests.MockScintillaView'
-	instanceVariableNames: 'lastStyled tokens text currentTextStyles styleIdMap'
-	classVariableNames: ''
-	imports: #(#{Smalltalk.ScintillaConstants})
-	classInstanceVariableNames: ''
-	classConstants: {}!
-Kernel.ParseNodeVisitor subclass: #'UI.Tests.StStyler'
-	instanceVariableNames: 'view arrayDepth'
-	classVariableNames: ''
-	imports: #()
 	classInstanceVariableNames: ''
 	classConstants: {}!
 Core.Tests.DolphinTest subclass: #'UI.Tests.AbstractContainerViewTest'
@@ -459,12 +442,6 @@ UI.Tests.MultilineTextEditTest subclass: #'UI.Tests.RichTextEditTest'
 	imports: #()
 	classInstanceVariableNames: ''
 	classConstants: {}!
-UI.Tests.MultilineTextEditTest subclass: #'UI.Tests.ScintillaViewTest'
-	instanceVariableNames: ''
-	classVariableNames: ''
-	imports: #()
-	classInstanceVariableNames: ''
-	classConstants: {}!
 UI.Tests.PresenterTest subclass: #'UI.Tests.TextEditTest'
 	instanceVariableNames: ''
 	classVariableNames: ''
@@ -546,7 +523,7 @@ UI.Tests.ListViewTest subclass: #'UI.Tests.MultiSelectListViewTest'
 UI.Tests.ListViewTest subclass: #'UI.Tests.SingleSelectListViewTest'
 	instanceVariableNames: ''
 	classVariableNames: ''
-	imports: #(#{Smalltalk.ListViewConstants} #{OS.ListViewConstants})
+	imports: #(#{OS.ListViewConstants})
 	classInstanceVariableNames: ''
 	classConstants: {}!
 UI.Tests.TabViewTest subclass: #'UI.Tests.TabViewXPTest'
@@ -569,6 +546,18 @@ UI.Tests.SelectableTreeItemsTest subclass: #'UI.Tests.TreePresenterTest'
 	classConstants: {}!
 UI.Tests.SelectableTreeItemsTest subclass: #'UI.Tests.TreeViewTest'
 	instanceVariableNames: ''
+	classVariableNames: ''
+	imports: #()
+	classInstanceVariableNames: ''
+	classConstants: {}!
+UI.Tests.TextEditTest subclass: #'UI.Tests.MultilineTextEditTest'
+	instanceVariableNames: ''
+	classVariableNames: ''
+	imports: #()
+	classInstanceVariableNames: ''
+	classConstants: {}!
+UI.Tests.MultilineTextEditTest subclass: #'UI.Tests.RichTextEditTest'
+	instanceVariableNames: 'savedLocale'
 	classVariableNames: ''
 	imports: #()
 	classInstanceVariableNames: ''
