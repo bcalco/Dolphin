@@ -2154,15 +2154,6 @@ Core.Object subclass: #'Core.Delay'
 	classConstants: {
 		'DefaultResolution' -> 16r3D09
 	}!
-Core.Object variableSubclass: #'External.Descriptor'
-	instanceVariableNames: 'descriptor'
-	classVariableNames: 'CallingConventions ReferenceTypes Shared TypeNames TypeSizes ValueTypes'
-	imports: #(#{External.ExtCallArgTypes})
-	classInstanceVariableNames: ''
-	classConstants: {
-		'RetClassIndex' -> 16r4.
-		'RetTypeMask' -> 16r3F
-	}!
 Core.Object subclass: #'External.DynamicLinkLibrary'
 	instanceVariableNames: 'handle'
 	classVariableNames: ''
@@ -2202,6 +2193,15 @@ Core.Object subclass: #'Core.FileLocator'
 	imports: #()
 	classInstanceVariableNames: ''
 	classConstants: {}!
+Core.Object variableSubclass: #'External.FunctionDescriptor'
+	instanceVariableNames: 'descriptor'
+	classVariableNames: 'CallingConventions ReferenceTypes TypeNames TypeSizes ValueTypes'
+	imports: #(#{External.ExtCallArgTypes})
+	classInstanceVariableNames: ''
+	classConstants: {
+		'RetClassIndex' -> 16r4.
+		'RetTypeMask' -> 16r3F
+	}!
 Core.Object variableByteSubclass: #'Core.GUID'
 	instanceVariableNames: ''
 	classVariableNames: 'Null'
@@ -2210,7 +2210,7 @@ Core.Object variableByteSubclass: #'Core.GUID'
 	classConstants: {}!
 Core.Object subclass: #'Kernel.InputState'
 	instanceVariableNames: 'inputSemaphore idler idleTimer main windows deferredActions lastWindow wakeupEvent msgWindow queueStatusMask'
-	classVariableNames: 'EnumHandlesDescriptor MaxIdleSleep SamplingInterval UserInterruptSignal'
+	classVariableNames: 'MaxIdleSleep SamplingInterval UserInterruptSignal'
 	imports: #(#{OS.Win32Constants})
 	classInstanceVariableNames: ''
 	classConstants: {}!
@@ -3444,7 +3444,7 @@ Core.Locale subclass: #'Kernel.SmalltalkLocale'
 	classConstants: {}!
 Core.Locale subclass: #'OS.WindowsLocale'
 	instanceVariableNames: 'lcid info'
-	classVariableNames: ''
+	classVariableNames: 'EnumNamesDescriptor'
 	imports: #()
 	classInstanceVariableNames: ''
 	classConstants: {}!
