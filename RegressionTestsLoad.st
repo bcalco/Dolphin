@@ -17,8 +17,8 @@ Package manager
 	install: 'Core\Object Arts\Dolphin\Database\Database Tests.pax';
 	install: 'Core\Object Arts\Dolphin\ActiveX\ActiveX Tests.pax';
 	install: 'Core\Object Arts\Dolphin\ActiveX\Automation\ActiveX Automation Tests.pax';
-	install: 'Core\Object Arts\Dolphin\IDE\Base\Development System Tests.pax';
 	install: 'Core\Object Arts\Dolphin\MVP\Dolphin MVP Tests.pax';
+	install: 'Core\Object Arts\Dolphin\IDE\Base\Development System Tests.pax';
 	install: 'Core\Object Arts\Dolphin\IDE\Dolphin IDE Tests.pax';
 	install: 'Core\Object Arts\Dolphin\Lagoon\Lagoon Tests.pax';
 	install: 'Core\Object Arts\Dolphin\Sockets\Dolphin Sockets Tests.pax';

@@ -12,6 +12,7 @@ package setClassNames: #(
 	#{Refactory.Browser.Tests.RewriteTestCase}
 	#{Smalltalk.XMLDOMNodeTest}
 	#{Tools.Tests}
+	#{Tools.Tests.ImageListViewTest}
 	#{Tools.Tests.KeyedAspectTest}
 	#{Tools.Tests.MenuPainterTest}
 	#{Tools.Tests.ProductReleaseTest}
@@ -35,6 +36,7 @@ package setPrerequisites: #(
 	'..\..\Base\Dolphin Base Tests'
 	'..\..\MVP\Dialogs\Common\Dolphin Common Dialogs'
 	'..\..\MVP\Base\Dolphin MVP Base'
+	'..\..\MVP\Dolphin MVP Tests'
 	'..\..\Lagoon\Lagoon Image Stripper'
 	'..\..\..\..\Contributions\Refactory\Refactoring Browser\Environments\RBEnvironments'
 	'..\..\..\..\Contributions\Refactory\Refactoring Browser\SmallLint\RBSmallLint'
@@ -93,6 +95,12 @@ Core.Tests.DolphinTest subclass: #'OS.Tests.VersionResourceTest'
 	classInstanceVariableNames: ''
 	classConstants: {}!
 Core.Tests.DolphinTest subclass: #XMLDOMNodeTest
+	instanceVariableNames: ''
+	classVariableNames: ''
+	imports: #()
+	classInstanceVariableNames: ''
+	classConstants: {}!
+UI.Tests.ImageViewAbstractTest subclass: #'Tools.Tests.ImageListViewTest'
 	instanceVariableNames: ''
 	classVariableNames: ''
 	imports: #()

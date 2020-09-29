@@ -33,7 +33,6 @@ package setClassNames: #(
 	#{UI.Tests.FolderTest}
 	#{UI.Tests.FramingLayoutTest}
 	#{UI.Tests.GridLayoutTest}
-	#{UI.Tests.ImageListViewTest}
 	#{UI.Tests.ImageViewAbstractTest}
 	#{UI.Tests.ImageViewTest}
 	#{UI.Tests.KeyboardTest}
@@ -449,12 +448,6 @@ UI.Tests.MultilineTextEditTest subclass: #'UI.Tests.RichTextEditTest'
 	classInstanceVariableNames: ''
 	classConstants: {}!
 UI.Tests.PresenterTest subclass: #'UI.Tests.TextEditTest'
-	instanceVariableNames: ''
-	classVariableNames: ''
-	imports: #()
-	classInstanceVariableNames: ''
-	classConstants: {}!
-UI.Tests.ImageViewAbstractTest subclass: #'UI.Tests.ImageListViewTest'
 	instanceVariableNames: ''
 	classVariableNames: ''
 	imports: #()
