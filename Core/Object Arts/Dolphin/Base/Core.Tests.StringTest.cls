@@ -527,7 +527,7 @@ testMutableCopy
 			subject := self assimilateString: each first.
 			actual := subject mutableCopy.
 			self deny: actual identicalTo: subject.
-			self assert: actual isKindOf: subject species.
+			self assert: actual isKindOf: subject copyingClass.
 			self assert: actual <===> subject equals: 0]!
 
 testRefersToLiteral
