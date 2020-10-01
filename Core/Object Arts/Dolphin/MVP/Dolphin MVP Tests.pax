@@ -18,6 +18,7 @@ package setClassNames: #(
 	#{UI.Tests}
 	#{UI.Tests.AbstractContainerViewTest}
 	#{UI.Tests.AbstractKeyboardTest}
+	#{UI.Tests.AbstractMultilineTextEditTest}
 	#{UI.Tests.AbstractTextEditTest}
 	#{UI.Tests.AcceleratorTableTest}
 	#{UI.Tests.BorderLayoutTest}
@@ -429,7 +430,7 @@ UI.Tests.PresenterTest subclass: #'UI.Tests.StaticTextTest'
 	imports: #()
 	classInstanceVariableNames: ''
 	classConstants: {}!
-UI.Tests.AbstractTextEditTest subclass: #'UI.Tests.MultilineTextEditTest'
+UI.Tests.AbstractTextEditTest subclass: #'UI.Tests.AbstractMultilineTextEditTest'
 	instanceVariableNames: ''
 	classVariableNames: ''
 	imports: #()
@@ -441,14 +442,14 @@ UI.Tests.AbstractTextEditTest subclass: #'UI.Tests.TextEditTest'
 	imports: #()
 	classInstanceVariableNames: ''
 	classConstants: {}!
-UI.Tests.MultilineTextEditTest subclass: #'UI.Tests.RichTextEditTest'
-	instanceVariableNames: 'savedLocale'
+UI.Tests.AbstractMultilineTextEditTest subclass: #'UI.Tests.MultilineTextEditTest'
+	instanceVariableNames: ''
 	classVariableNames: ''
 	imports: #()
 	classInstanceVariableNames: ''
 	classConstants: {}!
-UI.Tests.PresenterTest subclass: #'UI.Tests.TextEditTest'
-	instanceVariableNames: ''
+UI.Tests.AbstractMultilineTextEditTest subclass: #'UI.Tests.RichTextEditTest'
+	instanceVariableNames: 'savedLocale'
 	classVariableNames: ''
 	imports: #()
 	classInstanceVariableNames: ''
@@ -545,18 +546,6 @@ UI.Tests.SelectableTreeItemsTest subclass: #'UI.Tests.TreePresenterTest'
 	classConstants: {}!
 UI.Tests.SelectableTreeItemsTest subclass: #'UI.Tests.TreeViewTest'
 	instanceVariableNames: ''
-	classVariableNames: ''
-	imports: #()
-	classInstanceVariableNames: ''
-	classConstants: {}!
-UI.Tests.TextEditTest subclass: #'UI.Tests.MultilineTextEditTest'
-	instanceVariableNames: ''
-	classVariableNames: ''
-	imports: #()
-	classInstanceVariableNames: ''
-	classConstants: {}!
-UI.Tests.MultilineTextEditTest subclass: #'UI.Tests.RichTextEditTest'
-	instanceVariableNames: 'savedLocale'
 	classVariableNames: ''
 	imports: #()
 	classInstanceVariableNames: ''

@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-UI.Tests.AbstractTextEditTest subclass: #'UI.Tests.MultilineTextEditTest'
+UI.Tests.AbstractMultilineTextEditTest subclass: #'UI.Tests.MultilineTextEditTest'
 	instanceVariableNames: ''
 	classVariableNames: ''
 	imports: #()
@@ -18,7 +18,9 @@ margins
 	^1 @ 1!
 
 text
-	^Object comment copyWithout: Character tab! !
+	"We have to work with UTF-16 for character position test as the control reports positions in UTF-16 code units, so that won't match with the character positions in a UTF-8 string"
+
+	^super text asUtf16String! !
 !UI.Tests.MultilineTextEditTest categoriesFor: #classToTest!helpers!private! !
 !UI.Tests.MultilineTextEditTest categoriesFor: #margins!private!unit tests! !
 !UI.Tests.MultilineTextEditTest categoriesFor: #text!constants!private! !

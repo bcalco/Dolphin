@@ -44,7 +44,7 @@ Kernel.ParseNodeVisitor subclass: #'UI.Scintilla.Tests.StStyler'
 	imports: #()
 	classInstanceVariableNames: ''
 	classConstants: {}!
-UI.Tests.MultilineTextEditTest subclass: #'UI.Scintilla.Tests.ScintillaViewTest'
+UI.Tests.AbstractMultilineTextEditTest subclass: #'UI.Scintilla.Tests.ScintillaViewTest'
 	instanceVariableNames: ''
 	classVariableNames: ''
 	imports: #()

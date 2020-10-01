@@ -1,6 +1,6 @@
 ﻿"Filed out from Dolphin Smalltalk 7"!
 
-UI.Tests.MultilineTextEditTest subclass: #'UI.Tests.RichTextEditTest'
+UI.Tests.AbstractMultilineTextEditTest subclass: #'UI.Tests.RichTextEditTest'
 	instanceVariableNames: 'savedLocale'
 	classVariableNames: ''
 	imports: #()
@@ -143,7 +143,7 @@ testStreamInUtfText
 text
 	"As of v2.0 of the RichEdit control, it strips out CRs internally, and so positions will be out relative to the original text"
 
-	^'Ḽơᶉëᶆ ȋṕšᶙṁ ḍỡḽǭᵳ ʂǐť ӓṁệẗ, ĉṓɲṩḙċťᶒțûɾ ấɖḯƥĭṩčįɳġ ḝłįʈ'! !
+	^'Ḽơᶉëᶆ ȋṕšᶙṁ ḍỡḽǭᵳ ʂǐť ӓṁệẗ, ĉṓɲṩḙċťᶒțûɾ ấɖḯƥĭṩčįɳġ ḝłįʈ' asUtf16String! !
 !UI.Tests.RichTextEditTest categoriesFor: #classToTest!helpers!private! !
 !UI.Tests.RichTextEditTest categoriesFor: #margins!private!unit tests! !
 !UI.Tests.RichTextEditTest categoriesFor: #nonProportionalFont!constants!private! !
