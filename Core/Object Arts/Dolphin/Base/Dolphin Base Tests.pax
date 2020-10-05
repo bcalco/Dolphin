@@ -1092,7 +1092,7 @@ setTestAttributes: suitesNode id: idInteger name: suiteName duration: aDuration 
 writeJunitTestLog: aTestSuite result: aTestResult
 	| doc suitesNode currentId currentClass suiteNode classTests classErrors classFailures classSkipped classElapsed caseAttribs suiteName testsInteger errorsInteger failuresInteger skippedInteger duration |
 	suiteName := aTestSuite name ?? 'RegressionTests'.
-	doc := Smalltalk.IXMLDOMDocument3 new.
+	doc := MSXML newDocument.
 	suitesNode := doc addElement: 'testsuites'.
 	duration := aTestResult duration.
 	testsInteger := aTestResult runCount.
