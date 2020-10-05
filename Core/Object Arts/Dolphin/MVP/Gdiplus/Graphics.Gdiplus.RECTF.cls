@@ -34,6 +34,9 @@ struct tagRECTF {
 asRectangle
 	^self x @ self y extent: self width @ self height!
 
+bottom
+	^self y + self height!
+
 height
 	"Answer the <Float> value of the receiver's 'height' field."
 
@@ -46,6 +49,9 @@ height: aFloat
 
 left
 	^self x!
+
+right
+	^self x + self width!
 
 top
 	^self y!
@@ -80,9 +86,11 @@ y: aFloat
 
 	bytes floatAtOffset: _OffsetOf_y put: aFloat! !
 !Graphics.Gdiplus.RECTF categoriesFor: #asRectangle!converting!public! !
+!Graphics.Gdiplus.RECTF categoriesFor: #bottom!accessing!public! !
 !Graphics.Gdiplus.RECTF categoriesFor: #height!**compiled accessors**!public! !
 !Graphics.Gdiplus.RECTF categoriesFor: #height:!**compiled accessors**!public! !
 !Graphics.Gdiplus.RECTF categoriesFor: #left!public! !
+!Graphics.Gdiplus.RECTF categoriesFor: #right!accessing!public! !
 !Graphics.Gdiplus.RECTF categoriesFor: #top!public! !
 !Graphics.Gdiplus.RECTF categoriesFor: #width!**compiled accessors**!public! !
 !Graphics.Gdiplus.RECTF categoriesFor: #width:!**compiled accessors**!public! !
