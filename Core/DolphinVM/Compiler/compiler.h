@@ -124,7 +124,7 @@ private:
 	bool get_WantSyntaxCheckOnly() const { return !!(m_flags & CompilerFlags::SyntaxCheckOnly); }
 
 	__declspec(property(get = get_CodeSize)) size_t CodeSize;
-	size_t Compiler::get_CodeSize() const
+	size_t get_CodeSize() const
 	{
 		return m_bytecodes.size();
 	}
